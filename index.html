@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penguin Fun Facts Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 2s;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        #fun-fact {
+            font-size: 1.2em;
+            margin: 20px 0;
+            transition: transform 0.3s;
+        }
+
+        button {
+            background-color: #00796b;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background-color: #004d40;
+            transform: scale(1.1);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🐧 Penguin Fun Facts Generator</h1>
+        <p id="fun-fact">Click the button to generate a fun fact about penguins!</p>
+        <button id="generate-btn">Generate Another Fun Fact</button>
+    </div>
+    <script>
+        const facts = [
+            "Penguins are flightless birds that live almost exclusively in the Southern Hemisphere.",
+            "The Emperor Penguin is the tallest of all penguin species, reaching as tall as 120 cm (47 inches) in height.",
+            "Penguins can drink seawater because their supraorbital gland filters excess salt from the bloodstream.",
+            "A group of penguins in the water is called a raft, but on land, they're called a waddle.",
+            "Penguins spend around half of their lives in the water and the other half on land.",
+            "Penguins have a layer of fat under their skin to keep them warm in cold climates.",
+            "The smallest penguin species is the Little Blue Penguin, also known as the Fairy Penguin.",
+            "Penguins are excellent swimmers and can reach speeds of up to 15 miles per hour.",
+            "Penguins' black and white plumage serves as camouflage while swimming.",
+            "Most penguin species are monogamous and have long-term partners.",
+            "Penguins communicate with each other through vocalizations and body language.",
+            "The Galápagos Penguin is the only penguin species found north of the equator.",
+            "Penguins molt once a year, shedding their old feathers and growing new ones.",
+            "Penguins can hold their breath underwater for up to 20 minutes.",
+            "The King Penguin is the second largest penguin species after the Emperor Penguin.",
+            "Penguins have a special gland that helps them excrete excess salt from their bodies.",
+            "Penguins' eyes are adapted for underwater vision, allowing them to see clearly while hunting.",
+            "Penguins are social animals and often form large colonies called rookeries.",
+            "The Adélie Penguin is known for its long migrations, traveling up to 8,000 miles a year.",
+            "Penguins' bones are solid and heavy, which helps them dive and stay submerged."
+        ];
+
+        document.getElementById('generate-btn').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            const funFactElement = document.getElementById('fun-fact');
+            funFactElement.textContent = facts[randomIndex];
+            funFactElement.style.transform = 'scale(1.1)';
+            setTimeout(() => funFactElement.style.transform = 'scale(1)', 300);
+        });
+    </script>
+</body>
+</html>
