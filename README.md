@@ -10,8 +10,7 @@ Welcome to the Penguin Fun Facts Generator! This is a fun and interactive web ap
 
 🚀 How to Use
 
-1. 📥 Clone the Repository: 
-   git clone https://github.com/msrishav-28/penguin-fun-facts-generator.git
+1. 📥 Clone the Repository:
 2. 📂 Navigate to the Project Directory:
    cd penguin-fun-facts-generator
 3. 🌐 Open the index.html File:
